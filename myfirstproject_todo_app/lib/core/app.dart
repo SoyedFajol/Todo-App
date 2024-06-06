@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myfirstproject_todo_app/IntroPage.dart';
+import 'package:myfirstproject_todo_app/pages/IntroPage.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

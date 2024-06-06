@@ -1,7 +1,7 @@
 // ignore: file_names
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:myfirstproject_todo_app/todo_page.dart';
+import 'package:myfirstproject_todo_app/pages/homepage.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -32,10 +32,10 @@ class IntroPage extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => HomePage(),
+                      builder: (context) => const HomePage(),
                     ));
               },
-              child: Text('Next'))
+              child: const Text('Next'))
         ],
       ),
     );
