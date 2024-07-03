@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
           Navigator.pop(
             context,
             MaterialPageRoute(
-              builder: (context) => const IntroPage(),
+              builder: (context) => IntroPage(),
             ),
           );
         },

@@ -1,42 +1,40 @@
-// ignore: file_names
-// ignore: file_names
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
-import 'package:myfirstproject_todo_app/pages/homepage.dart';
+import 'package:myfirstproject_todo_app/constants/colors.dart';
 
 class IntroPage extends StatelessWidget {
-  const IntroPage({super.key});
+  IntroPage({super.key});
 
-  get onPressed => null;
-
+  final userinput = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Intro'),
-      ),
-      body: Column(
-        children: [
-          const Text(
-            'Welcome',
-            style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
+      body: Center(
+        child: Column(
+          children: [
+            TextField(
+              controller: userinput,
+              decoration: const InputDecoration(hintText: "TODO"),
             ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const HomePage(),
-                    ));
-              },
-              child: const Text('Next'))
-        ],
+            TextButton(
+                onPressed: () {
+                  log(userinput.text);
+                  userinput.clear();
+                },
+                child: const Text("Print"))
+          ],
+        ),
+      ),
+      appBar: AppBar(
+        backgroundColor: tdBG,
+        title: const Row(
+          children: [
+            Icon(
+              Icons.menu,
+            )
+          ],
+        ),
       ),
     );
   }
